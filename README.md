@@ -43,7 +43,8 @@ Password: 1234
 
 alke-wallet/
 │
-├── login.html
+├── index.html
+
 ├── menu.html
 ├── deposit.html
 ├── sendmoney.html
@@ -62,7 +63,8 @@ alke-wallet/
 
 1. Abrir la carpeta en VS Code  
 2. Instalar extensión Live Server  
-3. Click derecho en login.html → Open with Live Server  
+3. Click derecho en index.html
+ → Open with Live Server  
 
 ---
 

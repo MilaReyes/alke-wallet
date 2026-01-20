@@ -42,7 +42,7 @@ function initIfNeeded() {
   if (localStorage.getItem(LS_KEYS.BALANCE) === null) localStorage.setItem(LS_KEYS.BALANCE, "25000"); // saldo inicial
   if (localStorage.getItem(LS_KEYS.CONTACTS) === null) setJSON(LS_KEYS.CONTACTS, [
     { name: "Mamá", email: "mama@correo.cl" },
-    { name: "Esposo", email: "esposo@correo.cl" }
+    { name: "Felipe", email: "felipe@correo.cl" }
   ]);
   if (localStorage.getItem(LS_KEYS.TX) === null) setJSON(LS_KEYS.TX, []);
   if (localStorage.getItem(LS_KEYS.AUTH) === null) localStorage.setItem(LS_KEYS.AUTH, "false");
@@ -54,23 +54,25 @@ function isAuthed() {
 
 function requireAuth() {
   initIfNeeded();
+
   const path = (window.location.pathname || "").toLowerCase();
-  const isLogin = path.includes("index.html
-") || path.endsWith("/");
+  const isLogin = path.endsWith("/") || path.endsWith("/index.html") || path.includes("index.html");
+
   if (!isLogin && !isAuthed()) {
-    window.location.href = "index.html
-";
+    window.location.href = "index.html";
+    return;
   }
+
   if (isLogin && isAuthed()) {
     // Si ya está logueado, lo mandamos al menú
     window.location.href = "menu.html";
   }
 }
 
+
 function logout() {
   localStorage.setItem(LS_KEYS.AUTH, "false");
-  window.location.href = "index.html
-";
+  window.location.href = "index.html";
 }
 
 function getBalance() {
