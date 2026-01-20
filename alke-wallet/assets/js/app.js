@@ -55,11 +55,9 @@ function isAuthed() {
 function requireAuth() {
   initIfNeeded();
   const path = (window.location.pathname || "").toLowerCase();
-  const isLogin = path.includes("index.html
-") || path.endsWith("/");
+  const isLogin = path.includes("index.html") || path.endsWith("/");
   if (!isLogin && !isAuthed()) {
-    window.location.href = "index.html
-";
+    window.location.href = "index.html";
   }
   if (isLogin && isAuthed()) {
     // Si ya está logueado, lo mandamos al menú
@@ -69,8 +67,7 @@ function requireAuth() {
 
 function logout() {
   localStorage.setItem(LS_KEYS.AUTH, "false");
-  window.location.href = "index.html
-";
+  window.location.href = "index.html";
 }
 
 function getBalance() {
