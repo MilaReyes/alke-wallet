@@ -1,7 +1,4 @@
-# alke-wallet
-Aplicación de billetera digital que permita a los usuarios gestionar sus activos financieros de manera segura y conveniente.
-
-# 💳 Alke Wallet — Frontend Digital Wallet
+# Alke Wallet — Frontend Digital Wallet
 
 Aplicación web de billetera digital desarrollada como proyecto práctico de frontend.  
 Simula operaciones financieras básicas como inicio de sesión, depósitos, transferencias entre contactos y visualización de movimientos, utilizando almacenamiento local del navegador.
